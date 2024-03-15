@@ -1,23 +1,30 @@
 import React from 'react';
-import './App.css';
 import { useState, useEffect } from 'react';
 import { VerticalTabs } from './components/VerticalTabs/VerticalTabs'
-import { envProps } from './EnvProps'
-import { Box } from '@mui/material';
+import { UserOperations } from './components/Services'
+import { UserBox } from './components/UserBox/UserBox';
 
 function App() {
   const [data, setData] = useState([])
-  useEffect(() => {
-    fetch(envProps.urlFetchAll)
+  const getAllUsers = () => {
+    const operations = new UserOperations()
+    operations.fetchAllUsers()
       .then(response => response.json())
       .then(json => setData(json))
-      .then(() => {
-        console.log('Data: ', data)
-      })
       .catch(err => console.error(err))
+  }
+  useEffect(() => {
+    getAllUsers()
   }, [])
+  const updateGrid = () => {
+    getAllUsers()
+  }
   return (
     <div>
+      <div>User Management</div>
+      <hr />
+      <UserBox createHandler={updateGrid} />
+      <hr />
       <VerticalTabs items={data} />
     </div>
   );

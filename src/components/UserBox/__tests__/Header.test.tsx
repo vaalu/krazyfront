@@ -1,12 +1,11 @@
 import TestRenderer from 'react-test-renderer'
 import React from 'react'
-import { Header } from '../Header'
-import HeaderMock from '../__mocks__/HeaderMock.mock'
+import { UserBox } from '../UserBox'
 
 describe('Header', () => {
 	it('Headers with levels test', () => {
 		const tree = TestRenderer.create(
-		<Header {...HeaderMock[0]}>{ HeaderMock[0].label }</Header>
+		<UserBox />
 		).toJSON()
 		expect(tree).toMatchSnapshot()
 	})

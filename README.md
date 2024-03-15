@@ -1,4 +1,32 @@
-# Getting Started with Create React App
+# KrazyFront
+
+This module includes two implementations:
+1. Storybook module for ui preview and design
+2. Actual simple frontend with material-ui's basic view
+
+## Pre-requisites
+NodeJS v20.x
+NPM v10.4.x
+
+## General commands
+For building the UI
+1. From the root folder, we can use yarn or npm packages to prepare for build
+    - For yarn   ``` yarn ```
+    - For npm ``` npm install ```
+2. Then to build the application, use the following command:
+    - For yarn   ``` yarn build```
+    - For npm ``` npm run build ```
+3. For Unit tests: (please note that this will continuously run / looking for test updates unless terminated)
+    - For yarn   ``` yarn test ```
+    - For npm ``` npm run test ```
+4. For storybook:
+    - For yarn   ``` yarn storybook```
+    - For npm ``` npm run storybook ```
+5. For running the application
+    - For yarn   ``` yarn start```
+    - For npm ``` npm start ```
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
