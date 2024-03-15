@@ -9,6 +9,8 @@ NodeJS v20.x
 NPM v10.4.x
 
 ## General commands
+Generally used commands to build ui
+
 For building the UI
 1. From the root folder, we can use yarn or npm packages to prepare for build
     - For yarn   ``` yarn ```
@@ -25,6 +27,12 @@ For building the UI
 5. For running the application
     - For yarn   ``` yarn start```
     - For npm ``` npm start ```
+
+## Application configuration in .env file
+Before running the application, ensure to change the application url and port for backend communications that is present in the following location:
+```
+/.env
+```
 
 ## Getting Started with Create React App
 
